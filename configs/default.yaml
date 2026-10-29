@@ -1,0 +1,28 @@
+project:
+  name: generative-ai-image-synthesis-gans
+data:
+  raw_real_dir: data/raw/real
+  raw_fake_dir: data/raw/fake
+  processed_dir: data/processed
+  splits_dir: data/splits
+  image_size: 128
+  val_size: 0.10
+  test_size: 0.10
+training:
+  num_workers: 0
+  cpu_threads: 8
+classifier:
+  epochs: 8
+  batch_size: 32
+  lr: 0.0003
+gan:
+  epochs: 20
+  batch_size: 16
+  latent_dim: 128
+  lr: 0.0002
+  feature_maps: 32
+vae:
+  epochs: 10
+  batch_size: 16
+  latent_dim: 128
+  lr: 0.0005
